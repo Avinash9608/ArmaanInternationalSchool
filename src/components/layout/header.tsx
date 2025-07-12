@@ -35,14 +35,14 @@ export function AppHeader() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex md:space-x-6 lg:space-x-8">
+          <nav className="hidden md:flex md:space-x-4 lg:space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "font-medium text-foreground hover:text-sky transition-colors",
-                  pathname === link.href ? "text-sky font-bold" : ""
+                  "font-medium text-sm lg:text-base text-foreground hover:text-sky-500 transition-colors",
+                  pathname === link.href ? "text-sky-500 font-bold" : ""
                 )}
               >
                 {link.label}
@@ -74,8 +74,8 @@ export function AppHeader() {
                       href={link.href}
                       onClick={() => setIsOpen(false)}
                       className={cn(
-                        "text-lg font-medium text-foreground hover:text-sky transition-colors py-2 rounded-md",
-                        pathname === link.href ? "text-sky font-bold bg-muted" : ""
+                        "text-lg font-medium text-foreground hover:text-sky-500 transition-colors py-2 rounded-md",
+                        pathname === link.href ? "text-sky-500 font-bold bg-muted" : ""
                       )}
                     >
                       {link.label}

@@ -22,7 +22,7 @@ function HeroSection() {
         <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
           Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence.
         </p>
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/about">Learn More</Link>
           </Button>
@@ -59,7 +59,7 @@ function WelcomeSection() {
               data-ai-hint="school principal"
               width={400}
               height={400}
-              className="rounded-full shadow-lg"
+              className="rounded-full shadow-lg w-64 h-64 md:w-96 md:h-96 object-cover"
             />
           </div>
         </div>
@@ -102,7 +102,7 @@ function FeaturesSection() {
             Providing a holistic education that goes beyond the classroom.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
               <Image
@@ -142,7 +142,7 @@ function NewsSection() {
                     <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Latest News & Events</h2>
                     <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">Stay updated with our school's latest happenings and achievements.</p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {newsItems.map((item, index) => (
                         <Card key={index} className="flex flex-col">
                             <Image src={item.image} alt={item.title} data-ai-hint={item.imageHint} width={600} height={400} className="w-full h-48 object-cover rounded-t-lg" />
@@ -223,7 +223,7 @@ function CtaSection() {
                 <p className="mt-2 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
                     Take the next step in your child's educational journey. Explore our admission process or get in touch with our team.
                 </p>
-                <div className="mt-8 flex justify-center gap-4">
+                <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                         <Link href="/admissions">Admissions Inquiry</Link>
                     </Button>
