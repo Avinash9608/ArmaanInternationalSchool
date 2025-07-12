@@ -188,25 +188,25 @@ export default function AcademicsPage() {
               <div className="max-w-3xl mx-auto">
                   <Accordion type="single" collapsible className="w-full">
                       <AccordionItem value="item-1">
-                          <AccordionTrigger className="font-headline text-lg">What curriculum does the school follow?</AccordionTrigger>
+                          <AccordionTrigger className="font-headline text-lg text-left no-underline hover:no-underline">What curriculum does the school follow?</AccordionTrigger>
                           <AccordionContent className="text-muted-foreground">
                               We are aligned with the CBSE curriculum, focusing on a holistic approach to education that balances academics with extracurricular activities.
                           </AccordionContent>
                       </AccordionItem>
                       <AccordionItem value="item-2">
-                          <AccordionTrigger className="font-headline text-lg">What is the teacher-student ratio?</AccordionTrigger>
+                          <AccordionTrigger className="font-headline text-lg text-left no-underline hover:no-underline">What is the teacher-student ratio?</AccordionTrigger>
                           <AccordionContent className="text-muted-foreground">
                               We pride ourselves on maintaining a low teacher-student ratio to ensure that every child receives personalized attention and guidance.
                           </AccordionContent>
                       </AccordionItem>
                       <AccordionItem value="item-3">
-                          <AccordionTrigger className="font-headline text-lg">How are parents informed about their child's progress?</AccordionTrigger>
+                          <AccordionTrigger className="font-headline text-lg text-left no-underline hover:no-underline">How are parents informed about their child's progress?</AccordionTrigger>
                           <AccordionContent className="text-muted-foreground">
                               We conduct regular Parent-Teacher Meetings and provide detailed progress reports. Parents can also schedule meetings with teachers for specific concerns.
                           </AccordionContent>
                       </AccordionItem>
                       <AccordionItem value="item-4">
-                          <AccordionTrigger className="font-headline text-lg">Do you offer support for students with special needs?</AccordionTrigger>
+                          <AccordionTrigger className="font-headline text-lg text-left no-underline hover:no-underline">Do you offer support for students with special needs?</AccordionTrigger>
                           <AccordionContent className="text-muted-foreground">
                               Yes, we have a dedicated support team that works with students who require special educational assistance to help them achieve their full potential.
                           </AccordionContent>
