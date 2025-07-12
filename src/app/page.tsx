@@ -12,7 +12,7 @@ import React from "react";
 
 const heroImages = [
   {
-    src: "https://placehold.co/1920x1080.png",
+    src: "https://drive.google.com/uc?export=view&id=1L-K4v0I7HBgofxxDaL7XeDnNTjBhVePw",
     alt: "Students learning in a classroom",
     hint: "classroom students",
     title: "Empowering Young Minds",
@@ -58,6 +58,7 @@ function HeroSection() {
                   fill
                   className="object-cover brightness-50"
                   priority={index === 0}
+                  unoptimized
                 />
                 <div className="relative z-10 text-white container mx-auto px-4">
                   <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg animate-fade-in-down">
