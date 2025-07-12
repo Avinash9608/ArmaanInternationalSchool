@@ -4,17 +4,19 @@ import { AppHeader } from '@/components/layout/header';
 import { AppFooter } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
-import { Space_Grotesk, PT_Sans } from 'next/font/google';
+import { Lora, Space_Grotesk } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 
-const ptSans = PT_Sans({
+const lora = Lora({
   subsets: ['latin'],
+  style: ['normal', 'italic'],
   weight: ['400', '700'],
-  variable: '--font-pt-sans',
+  variable: '--font-lora',
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
+  weight: ['400', '700'],
   variable: '--font-space-grotesk',
 });
 
@@ -31,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <body className={cn('font-body antialiased', ptSans.variable, spaceGrotesk.variable)}>
+      <body className={cn('font-body antialiased', lora.variable, spaceGrotesk.variable)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
