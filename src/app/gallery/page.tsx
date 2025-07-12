@@ -31,6 +31,12 @@ const galleryVideos = {
   ],
 };
 
+const headerImages = [
+    { src: "https://placehold.co/1920x400.png", hint: "photo collage" },
+    { src: "https://placehold.co/1920x400.png", hint: "student event photography" },
+    { src: "https://placehold.co/1920x400.png", hint: "school memories" },
+]
+
 
 export default function GalleryPage() {
   return (
@@ -38,8 +44,7 @@ export default function GalleryPage() {
       <PageHeader
         title="Gallery"
         description="A glimpse into the vibrant life at Armaan International School."
-        imageUrl="https://placehold.co/1920x400.png"
-        imageHint="photo collage"
+        images={headerImages}
       />
 
       <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">

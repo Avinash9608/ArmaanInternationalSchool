@@ -3,14 +3,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
 import { Phone, Mail, MapPin } from "lucide-react";
 
+const headerImages = [
+    { src: "https://placehold.co/1920x400.png", hint: "contact us banner" },
+    { src: "https://placehold.co/1920x400.png", hint: "reception desk" },
+    { src: "https://placehold.co/1920x400.png", hint: "school front office" },
+]
+
 export default function ContactPage() {
   return (
     <>
       <PageHeader
         title="Contact Us"
         description="We'd love to hear from you. Get in touch with us for any inquiries."
-        imageUrl="https://placehold.co/1920x400.png"
-        imageHint="contact us banner"
+        images={headerImages}
       />
       <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">

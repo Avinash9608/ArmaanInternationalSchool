@@ -55,14 +55,19 @@ const academicSections = [
     }
 ]
 
+const headerImages = [
+    { src: "https://placehold.co/1920x400.png", hint: "students library" },
+    { src: "https://placehold.co/1920x400.png", hint: "science lab" },
+    { src: "https://placehold.co/1920x400.png", hint: "classroom discussion" },
+]
+
 export default function AcademicsPage() {
   return (
     <>
       <PageHeader
         title="Academics"
         description="Discover our comprehensive curriculum and innovative teaching methodologies."
-        imageUrl="https://placehold.co/1920x400.png"
-        imageHint="students library"
+        images={headerImages}
       />
 
       {/* Curriculum Overview */}

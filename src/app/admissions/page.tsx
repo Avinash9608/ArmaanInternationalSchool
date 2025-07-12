@@ -21,14 +21,19 @@ const requiredDocuments = [
     "Address Proof",
 ];
 
+const headerImages = [
+    { src: "https://placehold.co/1920x400.png", hint: "children school entrance" },
+    { src: "https://placehold.co/1920x400.png", hint: "happy students" },
+    { src: "https://placehold.co/1920x400.png", hint: "school main gate" },
+]
+
 export default function AdmissionsPage() {
   return (
     <>
       <PageHeader
         title="Admissions"
         description="Join the Armaan International School family. Here’s how to get started."
-        imageUrl="https://placehold.co/1920x400.png"
-        imageHint="children school entrance"
+        images={headerImages}
       />
 
       {/* Main Content: Form and Process */}

@@ -13,14 +13,19 @@ const values = [
     { icon: Award, title: "Responsibility and Accountability" },
 ]
 
+const headerImages = [
+    { src: "https://placehold.co/1920x400.png", hint: "school campus" },
+    { src: "https://placehold.co/1920x400.png", hint: "students in assembly" },
+    { src: "https://placehold.co/1920x400.png", hint: "school building front" },
+]
+
 export default function AboutPage() {
   return (
     <>
       <PageHeader
         title="About Us"
         description="Learn more about our mission, vision, and the people behind Armaan International School."
-        imageUrl="https://placehold.co/1920x400.png"
-        imageHint="school campus"
+        images={headerImages}
       />
       
       {/* Welcome Message */}

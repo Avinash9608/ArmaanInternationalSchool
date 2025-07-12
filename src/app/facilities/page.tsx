@@ -61,14 +61,19 @@ const facilities = [
   },
 ];
 
+const headerImages = [
+    { src: "https://placehold.co/1920x400.png", hint: "school infrastructure" },
+    { src: "https://placehold.co/1920x400.png", hint: "library shelves" },
+    { src: "https://placehold.co/1920x400.png", hint: "sports complex" },
+]
+
 export default function FacilitiesPage() {
   return (
     <>
       <PageHeader
         title="Our Facilities"
         description="Explore the state-of-the-art infrastructure at Armaan International School, designed to provide a conducive learning environment."
-        imageUrl="https://placehold.co/1920x400.png"
-        imageHint="school infrastructure"
+        images={headerImages}
       />
 
       <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
