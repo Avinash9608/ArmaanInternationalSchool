@@ -39,7 +39,7 @@ export function AppHeader() {
       "sticky top-0 z-50 w-full transition-all duration-300",
       isScrolled ? "bg-card shadow-md" : "bg-transparent"
     )}>
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex-shrink-0">
           <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
             <School className={cn("h-8 w-8", isScrolled ? "text-primary" : "text-white")} />
@@ -65,7 +65,7 @@ export function AppHeader() {
                     : "text-white hover:text-sky-300",
                   pathname === link.href 
                     ? (isScrolled ? "text-sky-600 font-bold" : "text-sky-300 font-bold") 
-                    : ""
+                    : (isScrolled ? "text-primary" : "text-white")
                 )}
               >
                 {link.label}
