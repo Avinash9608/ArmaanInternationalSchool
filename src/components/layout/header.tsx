@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect } from "react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -34,52 +35,52 @@ export function AppHeader() {
     };
   }, []);
 
-  const textColorClass = "text-primary";
-  const textHoverClass = "hover:text-sky-600";
-  const activeLinkClass = "text-sky-600 font-bold";
-  const textShadowClass = isScrolled ? "" : "drop-shadow-sm";
+  // Use transparent text only on the home page when at the top
+  const isHomeAndTop = pathname === '/' && !isScrolled;
+  const headerClasses = cn(
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isScrolled ? "bg-card shadow-md" : "bg-transparent",
+      isHomeAndTop && "text-white"
+  );
+  const linkClasses = cn(
+      "font-medium text-sm lg:text-base transition-colors",
+      isScrolled ? "text-primary" : isHomeAndTop ? "text-white hover:text-white/80" : "text-primary",
+      isHomeAndTop ? "drop-shadow-sm" : ""
+  );
 
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled ? "bg-card shadow-md" : "bg-transparent"
-    )}>
-      <div className="flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className={headerClasses}>
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-          <School className={cn("h-8 w-8", textColorClass, textShadowClass)} />
-          <span className={cn(
-            "text-xl font-headline font-bold",
-            textColorClass,
-            textShadowClass
-          )}>
+          <School className="h-8 w-8" />
+          <span className="text-xl font-headline font-bold">
             Armaan International
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-x-8">
+        <div className="hidden md:flex items-center gap-x-6">
           <nav className="flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "font-medium text-sm lg:text-base transition-colors",
-                  textColorClass,
-                  textHoverClass,
-                  textShadowClass,
-                  pathname === link.href && activeLinkClass
+                  linkClasses,
+                  pathname === link.href && "font-bold underline underline-offset-4"
                 )}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
+          <ThemeToggle />
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className={cn(textColorClass, "hover:bg-accent")}>
+              <Button variant="ghost" size="icon" className={cn(isScrolled || pathname !== '/' ? "text-primary hover:bg-accent" : "text-white hover:bg-white/20")}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
@@ -100,8 +101,8 @@ export function AppHeader() {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "text-lg font-medium text-foreground hover:text-sky-500 transition-colors py-2 rounded-md",
-                      pathname === link.href ? "text-sky-500 font-bold bg-muted" : ""
+                      "text-lg font-medium text-foreground hover:text-primary transition-colors py-2 rounded-md",
+                      pathname === link.href ? "text-primary font-bold bg-muted" : ""
                     )}
                   >
                     {link.label}

@@ -5,6 +5,7 @@ import { AppFooter } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Space_Grotesk, PT_Sans } from 'next/font/google';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
@@ -29,12 +30,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <body className={cn('font-body antialiased', ptSans.variable, spaceGrotesk.variable)}>
-        <AppHeader />
-        <main>{children}</main>
-        <AppFooter />
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AppHeader />
+          <main>{children}</main>
+          <AppFooter />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

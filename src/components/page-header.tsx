@@ -9,13 +9,13 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, imageUrl, imageHint }: PageHeaderProps) {
   return (
-    <section className="relative h-64 w-full flex items-center justify-center text-center text-white bg-primary">
+    <section className="relative h-64 w-full flex items-center justify-center text-center text-white bg-slate-800">
       <Image
         src={imageUrl}
         alt={title}
         data-ai-hint={imageHint}
         fill
-        className="absolute inset-0 object-cover opacity-30"
+        className="absolute inset-0 object-cover opacity-30 dark:opacity-20"
       />
       <div className="relative container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-headline font-bold drop-shadow-lg">
