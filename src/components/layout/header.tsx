@@ -24,8 +24,13 @@ const navLinks = [
 export function AppHeader() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
   const { theme } = useTheme();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,14 +43,15 @@ export function AppHeader() {
   }, []);
 
   const isHomeAndTop = pathname === '/' && !isScrolled;
+
   const headerClasses = cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled ? "bg-card shadow-md" : "bg-transparent",
+      isHomeAndTop ? "bg-transparent" : "bg-card shadow-md"
   );
   
   const linkClasses = cn(
     "font-medium text-sm lg:text-base transition-colors",
-    isHomeAndTop 
+    isHomeAndTop && theme === 'dark'
       ? "text-white hover:text-white/80" 
       : "text-primary hover:text-primary/80",
     isHomeAndTop && "drop-shadow-sm"
@@ -53,17 +59,32 @@ export function AppHeader() {
   
   const logoAndMenuClasses = cn(
     "transition-colors",
-    isHomeAndTop 
+    isHomeAndTop && theme === 'dark' 
       ? "text-white"
-      : "text-primary",
+      : "text-primary"
   );
   
   const mobileMenuButtonClasses = cn(
-    isHomeAndTop 
+    "transition-colors",
+    isHomeAndTop && theme === 'dark' 
       ? "text-white hover:bg-white/20"
       : "text-primary hover:bg-accent"
   );
 
+  if (!isMounted) {
+    return (
+        <header className={cn(headerClasses, 'bg-card shadow-md')}>
+            <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+                <Link href="/" className="flex items-center gap-2 text-primary">
+                    <School className="h-8 w-8" />
+                    <span className="text-xl font-headline font-bold">
+                        Armaan International
+                    </span>
+                </Link>
+            </div>
+        </header>
+    );
+  }
 
   return (
     <header className={headerClasses}>
