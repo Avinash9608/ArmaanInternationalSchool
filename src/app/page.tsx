@@ -13,9 +13,10 @@ function HeroSection() {
         alt="Armaan International School campus"
         data-ai-hint="school building students"
         fill
-        className="object-cover brightness-50 -z-10"
+        className="object-cover brightness-50"
+        priority
       />
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="relative z-10 container mx-auto px-4">
         <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">
           Empowering Young Minds
         </h1>
