@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
@@ -7,7 +8,7 @@ import { ArrowRight, GraduationCap, Dribbble, Building } from "lucide-react";
 // Components for different sections
 function HeroSection() {
   return (
-    <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
+    <section className="relative h-[60vh] md:h-[80vh] w-full">
       <Image
         src="https://placehold.co/1920x1080.png"
         alt="Armaan International School campus"
@@ -16,7 +17,7 @@ function HeroSection() {
         className="object-cover brightness-50"
         priority
       />
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white container mx-auto px-4">
         <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">
           Empowering Young Minds
         </h1>
