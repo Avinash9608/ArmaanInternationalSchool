@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { useTheme } from "next-themes";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -24,6 +25,7 @@ export function AppHeader() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,23 +37,38 @@ export function AppHeader() {
     };
   }, []);
 
-  // Use transparent text only on the home page when at the top
   const isHomeAndTop = pathname === '/' && !isScrolled;
   const headerClasses = cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
       isScrolled ? "bg-card shadow-md" : "bg-transparent",
-      isHomeAndTop && "text-white"
   );
+  
   const linkClasses = cn(
-      "font-medium text-sm lg:text-base transition-colors",
-      isScrolled ? "text-primary" : isHomeAndTop ? "text-white hover:text-white/80" : "text-primary",
-      isHomeAndTop ? "drop-shadow-sm" : ""
+    "font-medium text-sm lg:text-base transition-colors",
+    isHomeAndTop 
+      ? "text-white hover:text-white/80" 
+      : "text-primary hover:text-primary/80",
+    isHomeAndTop && "drop-shadow-sm"
   );
+  
+  const logoAndMenuClasses = cn(
+    "transition-colors",
+    isHomeAndTop 
+      ? "text-white"
+      : "text-primary",
+  );
+  
+  const mobileMenuButtonClasses = cn(
+    isHomeAndTop 
+      ? "text-white hover:bg-white/20"
+      : "text-primary hover:bg-accent"
+  );
+
 
   return (
     <header className={headerClasses}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+        <Link href="/" className={cn("flex items-center gap-2", logoAndMenuClasses)} onClick={() => setIsOpen(false)}>
           <School className="h-8 w-8" />
           <span className="text-xl font-headline font-bold">
             Armaan International
@@ -66,7 +83,7 @@ export function AppHeader() {
                 href={link.href}
                 className={cn(
                   linkClasses,
-                  pathname === link.href && "font-bold underline underline-offset-4"
+                  pathname === link.href && !isHomeAndTop && "font-bold underline underline-offset-4"
                 )}
               >
                 {link.label}
@@ -80,7 +97,7 @@ export function AppHeader() {
           <ThemeToggle />
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className={cn(isScrolled || pathname !== '/' ? "text-primary hover:bg-accent" : "text-white hover:bg-white/20")}>
+              <Button variant="ghost" size="icon" className={mobileMenuButtonClasses}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
