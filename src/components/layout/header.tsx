@@ -36,10 +36,10 @@ export function AppHeader() {
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 transition-all duration-300",
+      "sticky top-0 z-50 w-full transition-all duration-300",
       isScrolled ? "bg-card shadow-md" : "bg-transparent"
     )}>
-      <div className="flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex-shrink-0">
           <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
             <School className={cn("h-8 w-8", isScrolled ? "text-primary" : "text-white")} />
@@ -52,7 +52,7 @@ export function AppHeader() {
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center justify-end">
+        <div className="hidden md:flex items-center">
           <nav className="flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <Link
@@ -61,10 +61,10 @@ export function AppHeader() {
                 className={cn(
                   "font-medium text-sm lg:text-base transition-colors",
                   isScrolled 
-                    ? "text-foreground hover:text-sky-500" 
+                    ? "text-primary hover:text-sky-600" 
                     : "text-white hover:text-sky-300",
                   pathname === link.href 
-                    ? (isScrolled ? "text-sky-500 font-bold" : "text-sky-300 font-bold") 
+                    ? (isScrolled ? "text-sky-600 font-bold" : "text-sky-300 font-bold") 
                     : ""
                 )}
               >
