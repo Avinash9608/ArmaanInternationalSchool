@@ -35,7 +35,7 @@ export function AppHeader() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center">
             <nav className="flex items-center space-x-6 lg:space-x-8">
               {navLinks.map((link) => (
                 <Link
