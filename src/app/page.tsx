@@ -138,7 +138,7 @@ const features = [
     title: "Extracurriculars",
     description: "From sports to arts and clubs, we provide a wide range of activities to help students explore their passions.",
     image: "https://placehold.co/600x400.png",
-    imageHint: "kids sports",
+    imageHint: "kids sports painting",
   },
 ];
 
