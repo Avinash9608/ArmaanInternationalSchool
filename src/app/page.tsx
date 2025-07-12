@@ -12,21 +12,21 @@ import React from "react";
 
 const heroImages = [
   {
-    src: "https://placehold.co/1920x1080.png",
+    src: "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D",
     alt: "Students learning in a classroom",
     hint: "classroom students",
     title: "Empowering Young Minds",
     description: "Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence.",
   },
   {
-    src: "https://placehold.co/1920x1080.png",
+    src: "https://plus.unsplash.com/premium_photo-1681248156475-f95f078846d5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D",
     alt: "School library with students reading",
     hint: "school library",
     title: "A World of Knowledge Awaits",
     description: "Our well-stocked library and digital resources foster a love for reading and research."
   },
   {
-    src: "https://placehold.co/1920x1080.png",
+    src: "https://images.unsplash.com/photo-1441034281545-78296c3a6934?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTJ8fHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D",
     alt: "Students playing sports on the field",
     hint: "kids sports day",
     title: "Nurturing Talent Beyond Academics",
@@ -104,7 +104,7 @@ function WelcomeSection() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="https://placehold.co/400x400.png"
+              src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
               alt="Principal of Armaan International School"
               data-ai-hint="school principal"
               width={400}
@@ -123,21 +123,21 @@ const features = [
     icon: GraduationCap,
     title: "Academics",
     description: "Our curriculum is designed to challenge and inspire students, promoting critical thinking and a love for learning.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xhc3Nyb29tfGVufDB8fDB8fHww",
     imageHint: "classroom students",
   },
   {
     icon: Building,
     title: "Facilities",
     description: "We offer modern infrastructure, including smart classrooms, a well-stocked library, and science labs.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://images.unsplash.com/photo-1613896527026-f195d5c818ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Nob29sJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D",
     imageHint: "school building",
   },
   {
     icon: Dribbble,
     title: "Extracurriculars",
     description: "From sports to arts and clubs, we provide a wide range of activities to help students explore their passions.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://plus.unsplash.com/premium_photo-1673814842168-ed452b1f0b99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBhaW50aW5nfGVufDB8fDB8fHww",
     imageHint: "kids sports painting",
   },
 ];
@@ -181,9 +181,9 @@ function FeaturesSection() {
 }
 
 const newsItems = [
-    { title: "Annual Sports Day 2024", date: "August 15, 2024", image: "https://placehold.co/600x400.png", imageHint: "kids running race" },
-    { title: "Science Fair Winners Announced", date: "August 10, 2024", image: "https://placehold.co/600x400.png", imageHint: "science project" },
-    { title: "Parent-Teacher Meeting Schedule", date: "August 5, 2024", image: "https://placehold.co/600x400.png", imageHint: "meeting" },
+    { title: "Annual Sports Day 2024", date: "August 15, 2024", image: "https://plus.unsplash.com/premium_photo-1661605536374-4fe49a2da521?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3BvcnRzJTIwZGF5fGVufDB8fDB8fHww", imageHint: "kids running race" },
+    { title: "Science Fair Winners Announced", date: "August 10, 2024", image: "https://plus.unsplash.com/premium_photo-1683140893042-af3aa516ae40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NpZW5jZSUyMGZhaXJ8ZW58MHx8MHx8fDA%3D", imageHint: "science project" },
+    { title: "Parent-Teacher Meeting Schedule", date: "August 5, 2024", image: "https://images.unsplash.com/photo-1728138127500-fb73c1313f76?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFBhcmVudCUyMHRlYWNoZXIlMjBtZWV0aW5nfGVufDB8fDB8fHww", imageHint: "meeting" },
 ];
 
 function NewsSection() {
@@ -217,19 +217,19 @@ const testimonials = [
   {
     quote: "Armaan International School has been a great platform for my child's growth. The teachers are incredibly supportive and the environment is very positive.",
     name: "Aarav's Parent",
-    image: "https://placehold.co/100x100.png",
+    image: "https://images.unsplash.com/photo-1629360057380-18b15b42e650?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fFBhcmVudHxlbnwwfHwwfHx8MA%3D%3D",
     imageHint: "happy parent",
   },
   {
     quote: "I love my school! We learn so many new things and have a lot of fun with sports and art classes. My friends and teachers are the best.",
     name: "Priya, Class 5",
-    image: "https://placehold.co/100x100.png",
+    image: "https://plus.unsplash.com/premium_photo-1683133977483-6dde45c80599?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fFBhcmVudHxlbnwwfHwwfHx8MA%3D%3D",
     imageHint: "happy student",
   },
   {
     quote: "The focus on both academics and extracurriculars is what makes this school stand out. We are proud to be part of the Armaan family.",
     name: "Rohan's Parent",
-    image: "https://placehold.co/100x100.png",
+    image: "https://plus.unsplash.com/premium_photo-1681909713812-c43e48cd3762?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjV8fFBhcmVudHxlbnwwfHwwfHx8MA%3D%3D",
     imageHint: "smiling family",
   },
 ];
