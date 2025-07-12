@@ -9,7 +9,7 @@ function HeroSection() {
   return (
     <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
       <Image
-        src="/hero-background.jpg"
+        src="https://placehold.co/1920x1080.png"
         alt="Armaan International School campus"
         data-ai-hint="school building students"
         fill
