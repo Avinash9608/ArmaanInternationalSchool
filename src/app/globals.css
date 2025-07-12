@@ -29,8 +29,8 @@ body {
     --ring: 207 43% 14%;
     --radius: 0.5rem;
 
-    --gradient-start: #e0f2fe; /* sky-100 */
-    --gradient-end: #f0f9ff;   /* sky-50 */
+    --gradient-start: #f0f9ff; /* sky-50 */
+    --gradient-end: #e0f2fe;   /* sky-100 */
   }
 
   .dark {
