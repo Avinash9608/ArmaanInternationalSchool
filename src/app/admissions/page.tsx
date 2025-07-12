@@ -77,7 +77,7 @@ export default function AdmissionsPage() {
             {/* Admission Criteria */}
             <Card>
                 <CardHeader>
-                    <CardTitle className="font-headline flex items-center gap-3"><FileText/> Admission Criteria</CardTitle>
+                    <CardTitle className="font-headline flex items-center gap-3 text-xl sm:text-2xl"><FileText/> Admission Criteria</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p className="text-muted-foreground">Admissions are open for Classes 1 to 8. Admission is granted based on the following:</p>
@@ -93,7 +93,7 @@ export default function AdmissionsPage() {
             {/* Required Documents */}
             <Card>
                 <CardHeader>
-                    <CardTitle className="font-headline flex items-center gap-3"><FileText/> Required Documents</CardTitle>
+                    <CardTitle className="font-headline flex items-center gap-3 text-xl sm:text-2xl"><FileText/> Required Documents</CardTitle>
                 </CardHeader>
                 <CardContent>
                      <p className="text-muted-foreground">Please keep the following documents ready at the time of admission confirmation:</p>
@@ -108,7 +108,7 @@ export default function AdmissionsPage() {
             {/* Fees and Payment */}
             <Card>
                 <CardHeader>
-                    <CardTitle className="font-headline flex items-center gap-3"><CreditCard/> Fees & Payment</CardTitle>
+                    <CardTitle className="font-headline flex items-center gap-3 text-xl sm:text-2xl"><CreditCard/> Fees & Payment</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p className="text-muted-foreground">Details regarding the fee structure (admission fee, tuition fees, etc.) will be provided during the school visit and interaction session. We offer multiple payment options for your convenience.</p>

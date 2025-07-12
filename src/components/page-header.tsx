@@ -9,7 +9,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, imageUrl, imageHint }: PageHeaderProps) {
   return (
-    <section className="relative h-64 w-full flex items-center justify-center text-center text-white bg-slate-800">
+    <section className="relative h-64 md:h-80 w-full flex items-center justify-center text-center text-white bg-slate-800">
       <Image
         src={imageUrl}
         alt={title}

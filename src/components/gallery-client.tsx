@@ -40,7 +40,7 @@ export function GalleryClient({ galleries, videos }: GalleryClientProps) {
   return (
     <>
       <Tabs defaultValue="events" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 md:w-auto md:grid-cols-4 mx-auto mb-12">
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mx-auto mb-12 h-auto">
           <TabsTrigger value="events">Events</TabsTrigger>
           <TabsTrigger value="academics">Academics</TabsTrigger>
           <TabsTrigger value="sports">Sports</TabsTrigger>
@@ -49,7 +49,7 @@ export function GalleryClient({ galleries, videos }: GalleryClientProps) {
         
         {Object.entries(galleries).map(([category, images]) => (
           <TabsContent key={category} value={category}>
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+            <div className="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4">
               {images.map((image, index) => (
                 <div key={index} className="overflow-hidden rounded-lg shadow-lg break-inside-avoid cursor-pointer" onClick={() => openMedia(image, 'image')}>
                   <Image
@@ -68,7 +68,7 @@ export function GalleryClient({ galleries, videos }: GalleryClientProps) {
 
         {Object.entries(videos).map(([category, videoItems]) => (
            <TabsContent key={category} value={category}>
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+            <div className="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4">
               {videoItems.map((video, index) => (
                 <div key={index} className="relative overflow-hidden rounded-lg shadow-lg break-inside-avoid cursor-pointer group" onClick={() => openMedia(video, 'video')}>
                   <Image
@@ -80,7 +80,7 @@ export function GalleryClient({ galleries, videos }: GalleryClientProps) {
                     className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center transition-opacity duration-300 group-hover:bg-opacity-50">
-                    <PlayCircle className="h-16 w-16 text-white text-opacity-80" />
+                    <PlayCircle className="h-12 w-12 sm:h-16 sm:w-16 text-white text-opacity-80" />
                   </div>
                 </div>
               ))}

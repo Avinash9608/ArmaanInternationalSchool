@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
@@ -61,7 +60,7 @@ function WelcomeSection() {
               data-ai-hint="school principal"
               width={400}
               height={400}
-              className="rounded-full shadow-lg w-64 h-64 md:w-96 md:h-96 object-cover"
+              className="rounded-full shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover"
             />
           </div>
         </div>

@@ -18,9 +18,9 @@ export function AppFooter() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           
-          <div className="space-y-4 lg:col-span-1">
+          <div className="space-y-4 md:col-span-3 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <School className="h-8 w-8" />
               <span className="text-xl font-headline font-bold">
@@ -32,7 +32,7 @@ export function AppFooter() {
             </p>
           </div>
 
-          <div className="md:justify-self-start lg:justify-self-center">
+          <div className="md:justify-self-start">
             <h3 className="font-headline font-semibold uppercase tracking-wider">Quick Links</h3>
             <ul className="mt-4 space-y-2">
               {navLinks.map((link) => (
@@ -45,8 +45,8 @@ export function AppFooter() {
             </ul>
           </div>
 
-          <div className="md:justify-self-start lg:justify-self-center">
-            <h3 className="font-headline font-semibold uppercase tracking-wider md:invisible">More Links</h3>
+          <div className="md:justify-self-start">
+            <h3 className="font-headline font-semibold uppercase tracking-wider">More Links</h3>
             <ul className="mt-4 space-y-2">
               {otherLinks.map((link) => (
                 <li key={link.href}>
@@ -58,7 +58,7 @@ export function AppFooter() {
             </ul>
           </div>
           
-          <div className="md:col-span-2 lg:col-span-1">
+          <div>
             <h3 className="font-headline font-semibold uppercase tracking-wider">Contact Us</h3>
             <ul className="mt-4 space-y-3">
               <li className="flex items-start gap-3">
