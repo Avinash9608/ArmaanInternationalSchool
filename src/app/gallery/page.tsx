@@ -22,6 +22,15 @@ const galleryImages = {
   ],
 };
 
+const galleryVideos = {
+  videos: [
+    { src: "https://placehold.co/600x400.png", alt: "School Tour", description: "A virtual tour of Armaan International School's campus and facilities.", imageHint: "school campus video" },
+    { src: "https://placehold.co/600x400.png", alt: "Principal's Message", description: "A welcome message from our principal.", imageHint: "principal speech" },
+    { src: "https://placehold.co/600x400.png", alt: "Annual Day Highlights", description: "Highlights from our spectacular Annual Day function.", imageHint: "school event video" },
+    { src: "https://placehold.co/600x400.png", alt: "Student Testimonials", description: "Hear what our students have to say about their experience.", imageHint: "student interview" },
+  ],
+};
+
 
 export default function GalleryPage() {
   return (
@@ -35,7 +44,7 @@ export default function GalleryPage() {
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <GalleryClient galleries={galleryImages} />
+          <GalleryClient galleries={galleryImages} videos={galleryVideos} />
         </div>
       </section>
     </>
