@@ -292,10 +292,12 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <WelcomeSection />
-      <FeaturesSection />
-      <NewsSection />
-      <TestimonialsSection />
+      <div className="dark:bg-transparent bg-gradient-to-br from-rose-50 to-sky-100">
+        <WelcomeSection />
+        <FeaturesSection />
+        <NewsSection />
+        <TestimonialsSection />
+      </div>
       <CtaSection />
     </>
   );
