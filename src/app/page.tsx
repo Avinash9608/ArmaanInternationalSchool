@@ -11,7 +11,7 @@ function HeroSection() {
       <Image
         src="https://placehold.co/1920x1080.png"
         alt="Armaan International School campus"
-        data-ai-hint="school campus"
+        data-ai-hint="school building"
         fill
         className="absolute inset-0 -z-10 brightness-50 object-cover"
       />
