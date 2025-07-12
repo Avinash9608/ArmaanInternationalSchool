@@ -1,40 +1,89 @@
+
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, GraduationCap, Dribbble, Building } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
-// Components for different sections
+const heroImages = [
+  {
+    src: "https://placehold.co/1920x1080.png",
+    alt: "Students learning in a classroom",
+    hint: "classroom students",
+    title: "Empowering Young Minds",
+    description: "Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence."
+  },
+  {
+    src: "https://placehold.co/1920x1080.png",
+    alt: "School library with students reading",
+    hint: "school library",
+    title: "A World of Knowledge Awaits",
+    description: "Our well-stocked library and digital resources foster a love for reading and research."
+  },
+  {
+    src: "https://placehold.co/1920x1080.png",
+    alt: "Students playing sports on the field",
+    hint: "kids sports day",
+    title: "Nurturing Talent Beyond Academics",
+    description: "We believe in holistic development through a rich extracurricular program."
+  },
+];
+
 function HeroSection() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+
   return (
-    <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center">
-        <Image
-          src="https://placehold.co/1920x1080.png"
-          alt="Armaan International School campus"
-          data-ai-hint="school building students"
-          fill
-          className="object-cover brightness-50"
-          priority
-        />
-        <div className="relative z-10 text-white container mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">
-                Empowering Young Minds
-            </h1>
-            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
-                Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <Button asChild size="lg" className="bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
-                    <Link href="/about">Learn More</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
-                    <Link href="/admissions">Admissions</Link>
-                </Button>
-            </div>
-        </div>
+    <section className="relative h-[60vh] md:h-[80vh] w-full">
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full h-full"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent className="h-full">
+          {heroImages.map((image, index) => (
+            <CarouselItem key={index} className="h-full">
+              <div className="relative w-full h-full flex items-center justify-center text-center">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  data-ai-hint={image.hint}
+                  fill
+                  className="object-cover brightness-50"
+                  priority={index === 0}
+                />
+                <div className="relative z-10 text-white container mx-auto px-4">
+                  <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg animate-fade-in-down">
+                    {image.title}
+                  </h1>
+                  <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md animate-fade-in-up">
+                    {image.description}
+                  </p>
+                  <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <Button asChild size="lg" className="bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
+                      <Link href="/about">Learn More</Link>
+                    </Button>
+                    <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                      <Link href="/admissions">Admissions</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </section>
   );
 }
+
 
 function WelcomeSection() {
   return (
