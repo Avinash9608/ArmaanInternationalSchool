@@ -24,7 +24,7 @@ export default function AboutPage() {
       />
       
       {/* Welcome Message */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-12 items-center">
               <div className="flex justify-center md:col-span-1">
@@ -51,10 +51,10 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16">
-            <div className="bg-card p-8 rounded-lg shadow-md">
+            <div className="bg-card/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
                 <div className="flex items-center gap-4">
                     <div className="bg-accent/20 p-3 rounded-full">
                        <Eye className="w-8 h-8 text-accent-foreground" />
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 </div>
                 <p className="mt-4 text-muted-foreground">Our vision is to be a leading educational institution, recognized for our commitment to academic excellence, innovative teaching practices, and holistic development of students.</p>
             </div>
-            <div className="bg-card p-8 rounded-lg shadow-md">
+            <div className="bg-card/80 backdrop-blur-sm p-8 rounded-lg shadow-md">
                 <div className="flex items-center gap-4">
                     <div className="bg-accent/20 p-3 rounded-full">
                        <Star className="w-8 h-8 text-accent-foreground" />
@@ -77,7 +77,7 @@ export default function AboutPage() {
       </section>
 
       {/* School History */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
@@ -103,7 +103,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Our Core Values</h2>
@@ -114,7 +114,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {values.map((value, index) => (
                     <div key={index} className="text-center flex flex-col items-center">
-                        <div className="bg-card p-4 rounded-full shadow-md">
+                        <div className="bg-card/80 backdrop-blur-sm p-4 rounded-full shadow-md">
                            <value.icon className="w-8 h-8 text-accent-foreground" />
                         </div>
                         <h4 className="mt-4 font-headline font-semibold text-primary">{value.title}</h4>
@@ -125,7 +125,7 @@ export default function AboutPage() {
       </section>
       
       {/* Our Team */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center">
@@ -151,13 +151,13 @@ export default function AboutPage() {
       </section>
 
       {/* Infrastructure & Accreditation */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-headline font-bold text-primary">Facilities & Accreditation</h2>
             <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
               We provide state-of-the-art infrastructure and are proud to be affiliated with national educational boards, ensuring the highest standards of quality and learning.
             </p>
-            <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90" size="lg">
+            <Button asChild className="mt-8 bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90" size="lg">
               <Link href="/facilities">Explore Our Facilities</Link>
             </Button>
         </div>

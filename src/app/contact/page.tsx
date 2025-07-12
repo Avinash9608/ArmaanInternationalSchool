@@ -12,11 +12,11 @@ export default function ContactPage() {
         imageUrl="https://placehold.co/1920x400.png"
         imageHint="contact us banner"
       />
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-5 gap-12">
                 <div className="lg:col-span-3">
-                    <Card>
+                    <Card className="bg-card/80 backdrop-blur-sm">
                         <CardHeader>
                             <CardTitle className="font-headline">Send us a Message</CardTitle>
                         </CardHeader>
@@ -26,7 +26,7 @@ export default function ContactPage() {
                     </Card>
                 </div>
                 <div className="lg:col-span-2 space-y-8">
-                    <Card>
+                    <Card className="bg-card/80 backdrop-blur-sm">
                         <CardHeader>
                             <CardTitle className="font-headline">Contact Information</CardTitle>
                         </CardHeader>

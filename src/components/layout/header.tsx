@@ -46,29 +46,26 @@ export function AppHeader() {
 
   const headerClasses = cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
-      isHomeAndTop ? "bg-transparent" : "bg-card shadow-md"
+      isHomeAndTop ? "bg-transparent" : "bg-card/80 shadow-md backdrop-blur-sm"
   );
   
   const linkClasses = cn(
     "font-medium text-sm lg:text-base transition-colors",
-    isHomeAndTop && theme === 'dark'
-      ? "text-white hover:text-white/80" 
-      : "text-primary hover:text-primary/80",
+    isHomeAndTop ? "text-white hover:text-white/80" : "text-primary hover:text-primary/80",
+    isHomeAndTop && theme === 'light' && "text-primary hover:text-primary/80",
     isHomeAndTop && "drop-shadow-sm"
   );
   
   const logoAndMenuClasses = cn(
     "transition-colors",
-    isHomeAndTop && theme === 'dark' 
-      ? "text-white"
-      : "text-primary"
+    isHomeAndTop ? "text-white" : "text-primary",
+    isHomeAndTop && theme === 'light' && "text-primary"
   );
   
   const mobileMenuButtonClasses = cn(
     "transition-colors",
-    isHomeAndTop && theme === 'dark' 
-      ? "text-white hover:bg-white/20"
-      : "text-primary hover:bg-accent"
+    isHomeAndTop ? "text-white hover:bg-white/20" : "text-primary hover:bg-accent",
+    isHomeAndTop && theme === 'light' && "text-primary"
   );
 
   if (!isMounted) {
@@ -123,7 +120,7 @@ export function AppHeader() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-card">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-card/80 backdrop-blur-sm">
                <div className="flex-shrink-0 mb-8">
                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
                     <School className="h-8 w-8 text-primary" />

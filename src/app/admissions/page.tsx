@@ -32,20 +32,20 @@ export default function AdmissionsPage() {
       />
 
       {/* Main Content: Form and Process */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 grid lg:grid-cols-3 gap-16">
             <div className="lg:col-span-2">
                 <AdmissionsForm />
             </div>
             <div className="lg:col-span-1 space-y-8">
-                 <Card>
+                 <Card className="bg-card/80 backdrop-blur-sm">
                     <CardHeader>
                         <CardTitle className="font-headline">Admission Process</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
                        {processSteps.map((step, index) => (
                            <div key={index} className="flex gap-4">
-                               <div className="flex-shrink-0 bg-primary text-primary-foreground h-10 w-10 rounded-full flex items-center justify-center">
+                               <div className="flex-shrink-0 bg-gradient-to-br from-primary to-sky-800 text-primary-foreground h-10 w-10 rounded-full flex items-center justify-center">
                                    <step.icon className="h-5 w-5" />
                                </div>
                                <div>
@@ -56,13 +56,13 @@ export default function AdmissionsPage() {
                        ))}
                     </CardContent>
                 </Card>
-                <Card>
+                <Card className="bg-card/80 backdrop-blur-sm">
                     <CardHeader>
                         <CardTitle className="font-headline">Admission Brochure</CardTitle>
                     </CardHeader>
                     <CardContent>
                        <p className="text-muted-foreground mb-4">Download our brochure for detailed information about our school and the admission process.</p>
-                       <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                       <Button asChild className="w-full bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
                             <Link href="#"><Download className="mr-2"/> Download Brochure</Link>
                        </Button>
                     </CardContent>
@@ -72,10 +72,10 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Detailed Information Section */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Admission Criteria */}
-            <Card>
+            <Card className="bg-card/80 backdrop-blur-sm">
                 <CardHeader>
                     <CardTitle className="font-headline flex items-center gap-3 text-xl sm:text-2xl"><FileText/> Admission Criteria</CardTitle>
                 </CardHeader>
@@ -91,7 +91,7 @@ export default function AdmissionsPage() {
             </Card>
 
             {/* Required Documents */}
-            <Card>
+            <Card className="bg-card/80 backdrop-blur-sm">
                 <CardHeader>
                     <CardTitle className="font-headline flex items-center gap-3 text-xl sm:text-2xl"><FileText/> Required Documents</CardTitle>
                 </CardHeader>
@@ -106,7 +106,7 @@ export default function AdmissionsPage() {
             </Card>
 
             {/* Fees and Payment */}
-            <Card>
+            <Card className="bg-card/80 backdrop-blur-sm">
                 <CardHeader>
                     <CardTitle className="font-headline flex items-center gap-3 text-xl sm:text-2xl"><CreditCard/> Fees & Payment</CardTitle>
                 </CardHeader>
@@ -118,7 +118,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Frequently Asked Questions</h2>
@@ -155,7 +155,7 @@ export default function AdmissionsPage() {
       </section>
 
        {/* Contact CTA */}
-       <section className="py-16 bg-primary">
+       <section className="py-16 bg-primary/90">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
             <h2 className="text-3xl font-headline font-bold">Have More Questions?</h2>
             <p className="mt-2 text-lg text-primary-foreground/80 max-w-2xl mx-auto">

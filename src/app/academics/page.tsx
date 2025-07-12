@@ -66,7 +66,7 @@ export default function AcademicsPage() {
       />
 
       {/* Curriculum Overview */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -95,7 +95,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Teaching Methodologies */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Our Teaching Methods</h2>
@@ -105,7 +105,7 @@ export default function AcademicsPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
                 {teachingMethods.map((method, index) => (
-                    <Card key={index} className="text-center p-8">
+                    <Card key={index} className="text-center p-8 bg-card/80 backdrop-blur-sm">
                         <div className="flex justify-center">
                            <div className="bg-accent/20 p-4 rounded-full">
                                 <method.icon className="w-8 h-8 text-accent-foreground" />
@@ -120,7 +120,7 @@ export default function AcademicsPage() {
       </section>
 
        {/* Alternating Feature Sections */}
-       <section className="py-16 md:py-24 bg-card space-y-16">
+       <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm space-y-16">
           {academicSections.map((section, index) => (
             <div key={index} className="container mx-auto px-4">
               <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -146,7 +146,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Downloadable Resources */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
              <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Resources</h2>
@@ -155,23 +155,23 @@ export default function AcademicsPage() {
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <Card className="p-6 flex flex-col sm:flex-row items-center gap-6">
+                <Card className="p-6 flex flex-col sm:flex-row items-center gap-6 bg-card/80 backdrop-blur-sm">
                     <Calendar className="w-12 h-12 text-accent-foreground flex-shrink-0" />
                     <div>
                         <h3 className="font-headline text-xl font-semibold text-primary">Academic Calendar</h3>
                         <p className="text-muted-foreground mt-1">View important dates for the academic year.</p>
                     </div>
-                    <Button asChild className="mt-4 sm:mt-0 sm:ml-auto bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button asChild className="mt-4 sm:mt-0 sm:ml-auto bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
                         <Link href="#"><Download className="mr-2 h-4 w-4" /> Download</Link>
                     </Button>
                 </Card>
-                <Card className="p-6 flex flex-col sm:flex-row items-center gap-6">
+                <Card className="p-6 flex flex-col sm:flex-row items-center gap-6 bg-card/80 backdrop-blur-sm">
                     <BookOpen className="w-12 h-12 text-accent-foreground flex-shrink-0" />
                     <div>
                         <h3 className="font-headline text-xl font-semibold text-primary">Syllabus</h3>
                         <p className="text-muted-foreground mt-1">Access study materials for each class.</p>
                     </div>
-                    <Button asChild className="mt-4 sm:mt-0 sm:ml-auto bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button asChild className="mt-4 sm:mt-0 sm:ml-auto bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
                         <Link href="#"><Download className="mr-2 h-4 w-4" /> View All</Link>
                     </Button>
                 </Card>
@@ -180,7 +180,7 @@ export default function AcademicsPage() {
       </section>
       
       {/* FAQs */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Frequently Asked Questions</h2>
@@ -217,7 +217,7 @@ export default function AcademicsPage() {
       </section>
 
        {/* Contact CTA */}
-       <section className="py-16 bg-primary">
+       <section className="py-16 bg-primary/90">
         <div className="container mx-auto px-4 text-center text-primary-foreground">
             <h2 className="text-3xl font-headline font-bold">Have More Questions?</h2>
             <p className="mt-2 text-lg text-primary-foreground/80 max-w-2xl mx-auto">

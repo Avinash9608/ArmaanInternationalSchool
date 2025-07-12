@@ -71,7 +71,7 @@ export default function FacilitiesPage() {
         imageHint="school infrastructure"
       />
 
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">A World-Class Learning Environment</h2>
@@ -81,7 +81,7 @@ export default function FacilitiesPage() {
             </div>
             <div className="space-y-20">
             {facilities.map((facility, index) => (
-              <div key={index} className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+              <div key={index} className="grid md:grid-cols-2 gap-12 md:gap-16 items-center p-8 rounded-lg bg-card/80 backdrop-blur-sm shadow-lg">
                 <div className={`flex justify-center ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                    <Image
                       src={facility.image}

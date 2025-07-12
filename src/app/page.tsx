@@ -24,7 +24,7 @@ function HeroSection() {
                 Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button asChild size="lg" className="bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
                     <Link href="/about">Learn More</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
@@ -38,7 +38,7 @@ function HeroSection() {
 
 function WelcomeSection() {
   return (
-    <section className="py-16 md:py-24 bg-card">
+    <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -95,7 +95,7 @@ const features = [
 
 function FeaturesSection() {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Our Key Features</h2>
@@ -105,7 +105,7 @@ function FeaturesSection() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+            <Card key={index} className="overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 bg-card/80 backdrop-blur-sm">
               <Image
                 src={feature.image}
                 alt={feature.title}
@@ -115,7 +115,9 @@ function FeaturesSection() {
                 className="w-full h-48 object-cover"
               />
               <CardHeader className="flex-row items-center gap-4">
-                <feature.icon className="w-8 h-8 text-accent-foreground" />
+                 <div className="p-2 bg-gradient-to-br from-accent to-sky-400 rounded-lg text-accent-foreground">
+                    <feature.icon className="w-8 h-8" />
+                 </div>
                 <CardTitle className="font-headline">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
@@ -137,7 +139,7 @@ const newsItems = [
 
 function NewsSection() {
     return (
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Latest News & Events</h2>
@@ -145,7 +147,7 @@ function NewsSection() {
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {newsItems.map((item, index) => (
-                        <Card key={index} className="flex flex-col">
+                        <Card key={index} className="flex flex-col bg-card/80 backdrop-blur-sm">
                             <Image src={item.image} alt={item.title} data-ai-hint={item.imageHint} width={600} height={400} className="w-full h-48 object-cover rounded-t-lg" />
                             <CardContent className="p-6 flex-grow flex flex-col">
                                 <p className="text-sm text-muted-foreground">{item.date}</p>
@@ -185,7 +187,7 @@ const testimonials = [
 
 function TestimonialsSection() {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">What Our Community Says</h2>
@@ -193,7 +195,7 @@ function TestimonialsSection() {
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 text-center">
+            <Card key={index} className="p-6 text-center bg-card/80 backdrop-blur-sm">
               <CardContent>
                 <p className="text-muted-foreground">"{testimonial.quote}"</p>
                 <div className="mt-6 flex flex-col items-center">
@@ -218,14 +220,14 @@ function TestimonialsSection() {
 
 function CtaSection() {
     return (
-        <section className="bg-primary">
+        <section className="bg-primary/90">
             <div className="container mx-auto px-4 py-16 text-center">
                 <h2 className="text-3xl font-headline font-bold text-primary-foreground">Ready to Join Us?</h2>
                 <p className="mt-2 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
                     Take the next step in your child's educational journey. Explore our admission process or get in touch with our team.
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button asChild size="lg" className="bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
                         <Link href="/admissions">Admissions Inquiry</Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">

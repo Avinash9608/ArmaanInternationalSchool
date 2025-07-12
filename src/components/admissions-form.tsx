@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { submitAdmission } from "@/app/admissions/actions";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
 
@@ -22,7 +21,7 @@ const initialState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full">
+    <Button type="submit" disabled={pending} className="w-full bg-gradient-to-r from-primary to-sky-800 text-primary-foreground hover:from-primary/90 hover:to-sky-800/90">
       {pending ? "Submitting..." : "Submit Inquiry"}
     </Button>
   );
@@ -47,17 +46,17 @@ export function AdmissionsForm() {
   }, [state, toast]);
 
   return (
-    <Card>
+    <Card className="bg-card/80 backdrop-blur-sm">
       <CardHeader>
         <CardTitle className="font-headline">Online Admission Inquiry</CardTitle>
         <CardDescription>Fill out the form below to begin the admission process. No document uploads required at this stage.</CardDescription>
       </CardHeader>
       <CardContent>
         {state.isSuccess ? (
-             <div className="flex flex-col items-center justify-center text-center space-y-4 p-8 bg-green-50 rounded-lg">
+             <div className="flex flex-col items-center justify-center text-center space-y-4 p-8 bg-green-50/20 rounded-lg">
                 <CheckCircle className="h-16 w-16 text-green-500" />
-                <h3 className="text-2xl font-headline font-bold text-green-800">Inquiry Submitted!</h3>
-                <p className="text-green-700">{state.message}</p>
+                <h3 className="text-2xl font-headline font-bold text-green-800 dark:text-green-300">Inquiry Submitted!</h3>
+                <p className="text-green-700 dark:text-green-200">{state.message}</p>
              </div>
         ) : (
           <form ref={formRef} action={formAction} className="space-y-6">

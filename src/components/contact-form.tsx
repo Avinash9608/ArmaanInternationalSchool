@@ -1,13 +1,12 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { submitContactForm } from "@/app/contact/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
 
@@ -20,7 +19,7 @@ const initialState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full">
+    <Button type="submit" disabled={pending} className="w-full bg-gradient-to-r from-primary to-sky-800 text-primary-foreground hover:from-primary/90 hover:to-sky-800/90">
       {pending ? "Sending..." : "Send Message"}
     </Button>
   );
@@ -46,10 +45,10 @@ export function ContactForm() {
 
   if (state.isSuccess) {
     return (
-      <div className="flex flex-col items-center justify-center text-center space-y-4 p-8 bg-green-50 rounded-lg h-full min-h-[480px]">
+      <div className="flex flex-col items-center justify-center text-center space-y-4 p-8 bg-green-50/20 rounded-lg h-full min-h-[480px]">
          <CheckCircle className="h-16 w-16 text-green-500" />
-         <h3 className="text-2xl font-headline font-bold text-green-800">Message Sent!</h3>
-         <p className="text-green-700">{state.message}</p>
+         <h3 className="text-2xl font-headline font-bold text-green-800 dark:text-green-300">Message Sent!</h3>
+         <p className="text-green-700 dark:text-green-200">{state.message}</p>
       </div>
     )
   }
