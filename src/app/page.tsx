@@ -8,31 +8,31 @@ import { ArrowRight, GraduationCap, Dribbble, Building } from "lucide-react";
 // Components for different sections
 function HeroSection() {
   return (
-    <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center">
-      <Image
-        src="https://placehold.co/1920x1080.png"
-        alt="Armaan International School campus"
-        data-ai-hint="school building students"
-        fill
-        className="object-cover brightness-50"
-        priority
-      />
-      <div className="relative z-10 text-center text-white container mx-auto px-4">
-        <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">
-          Empowering Young Minds
-        </h1>
-        <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
-          Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/about">Learn More</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
-            <Link href="/admissions">Admissions</Link>
-          </Button>
+    <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center">
+        <Image
+          src="https://placehold.co/1920x1080.png"
+          alt="Armaan International School campus"
+          data-ai-hint="school building students"
+          fill
+          className="object-cover brightness-50"
+          priority
+        />
+        <div className="relative z-10 text-white container mx-auto px-4">
+            <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">
+                Empowering Young Minds
+            </h1>
+            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
+                Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Link href="/about">Learn More</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                    <Link href="/admissions">Admissions</Link>
+                </Button>
+            </div>
         </div>
-      </div>
     </section>
   );
 }
