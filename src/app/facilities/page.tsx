@@ -1,6 +1,6 @@
 import { PageHeader } from "@/components/page-header";
 import Image from "next/image";
-import { Library, Tv, Microscope, Gamepad2, Brush, ShieldCheck, Bus, Utensils, Presentation } from "lucide-react";
+import { Library, Tv, Microscope, Gamepad2, Brush, ShieldCheck, Bus, Utensils, Presentation, Home, BedDouble } from "lucide-react";
 
 const facilities = [
   {
@@ -58,6 +58,20 @@ const facilities = [
     description: "The entire campus is under CCTV surveillance, and we have trained security personnel to ensure a safe and secure environment for our students at all times.",
     image: "https://placehold.co/600x400.png",
     imageHint: "school gate security"
+  },
+  {
+    icon: Home,
+    title: "Tuition Classes for Kids",
+    description: "We provide high-quality tuition classes conducted by experienced teachers in a comfortable home environment. We offer focused attention and cover all major subjects. Timings: 3:00 PM to 5:00 PM and 6:00 PM to 8:00 PM.",
+    image: "https://placehold.co/600x400.png",
+    imageHint: "home tuition"
+  },
+  {
+    icon: BedDouble,
+    title: "Hostel Facility",
+    description: "We also offer a secure and well-maintained hostel for students, featuring nutritious meals, comfortable accommodation, daily study support, a hygienic environment, and 24x7 supervision and care.",
+    image: "https://placehold.co/600x400.png",
+    imageHint: "hostel room"
   },
 ];
 
