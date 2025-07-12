@@ -8,16 +8,14 @@ import { ArrowRight, GraduationCap, Dribbble, Building } from "lucide-react";
 function HeroSection() {
   return (
     <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/hero-background.jpg"
-          alt="Armaan International School campus"
-          data-ai-hint="school building students"
-          fill
-          className="object-cover brightness-50"
-        />
-      </div>
-      <div className="container mx-auto px-4">
+      <Image
+        src="/hero-background.jpg"
+        alt="Armaan International School campus"
+        data-ai-hint="school building students"
+        fill
+        className="object-cover brightness-50 -z-10"
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">
           Empowering Young Minds
         </h1>
