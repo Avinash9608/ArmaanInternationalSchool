@@ -70,7 +70,7 @@ function HeroSection() {
                     <Button asChild size="lg" className="bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
                       <Link href="/about">Learn More</Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                    <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary dark:text-primary dark:border-primary dark:hover:bg-primary dark:hover:text-primary-foreground">
                       <Link href="/admissions">Admissions</Link>
                     </Button>
                   </div>
@@ -137,7 +137,7 @@ const features = [
     icon: Dribbble,
     title: "Extracurriculars",
     description: "From sports to arts and clubs, we provide a wide range of activities to help students explore their passions.",
-    image: "https://plus.unsplash.com/premium_photo-1673814842168-ed452b1f0b99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBhaW50aW5nfGVufDB8fDB8fHww",
+    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageHint: "kids sports painting",
   },
 ];
@@ -279,7 +279,7 @@ function CtaSection() {
                     <Button asChild size="lg" className="bg-gradient-to-r from-accent to-sky-400 text-accent-foreground hover:from-accent/90 hover:to-sky-400/90">
                         <Link href="/admissions">Admissions Inquiry</Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+                    <Button asChild size="lg" variant="outline" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
                         <Link href="/contact">Contact Us</Link>
                     </Button>
                 </div>
