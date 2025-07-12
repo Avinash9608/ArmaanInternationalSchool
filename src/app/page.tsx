@@ -10,9 +10,9 @@ function HeroSection() {
     <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="/hero-background.jpg"
           alt="Armaan International School campus"
-          data-ai-hint="school building"
+          data-ai-hint="school building students"
           fill
           className="object-cover brightness-50"
         />
