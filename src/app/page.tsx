@@ -12,12 +12,11 @@ import React from "react";
 
 const heroImages = [
   {
-    src: "https://drive.google.com/uc?export=view&id=1L-K4v0I7HBgofxxDaL7XeDnNTjBhVePw",
+    src: "https://placehold.co/1920x1080.png",
     alt: "Students learning in a classroom",
     hint: "classroom students",
     title: "Empowering Young Minds",
     description: "Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence.",
-    isGoogleDrive: true,
   },
   {
     src: "https://placehold.co/1920x1080.png",
@@ -52,14 +51,7 @@ function HeroSection() {
           {heroImages.map((image, index) => (
             <CarouselItem key={index} className="h-full">
               <div className="relative w-full h-full flex items-center justify-center text-center">
-                {image.isGoogleDrive ? (
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover brightness-50"
-                  />
-                ) : (
-                  <Image
+                <Image
                     src={image.src}
                     alt={image.alt}
                     data-ai-hint={image.hint}
@@ -67,7 +59,6 @@ function HeroSection() {
                     className="object-cover brightness-50"
                     priority={index === 0}
                   />
-                )}
                 <div className="relative z-10 text-white container mx-auto px-4">
                   <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg animate-fade-in-down">
                     {image.title}
@@ -309,5 +300,3 @@ export default function Home() {
     </>
   );
 }
-
-    
