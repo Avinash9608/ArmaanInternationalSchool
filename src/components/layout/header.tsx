@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -38,77 +39,75 @@ export function AppHeader() {
       "sticky top-0 z-50 transition-all duration-300",
       isScrolled ? "bg-card shadow-md" : "bg-transparent"
     )}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-              <School className={cn("h-8 w-8", isScrolled ? "text-primary" : "text-white")} />
-              <span className={cn(
-                "text-xl font-headline font-bold",
-                isScrolled ? "text-primary" : "text-white"
-              )}>
-                Armaan International
-              </span>
-            </Link>
-          </div>
+      <div className="flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
+        <div className="flex-shrink-0">
+          <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+            <School className={cn("h-8 w-8", isScrolled ? "text-primary" : "text-white")} />
+            <span className={cn(
+              "text-xl font-headline font-bold",
+              isScrolled ? "text-primary" : "text-white"
+            )}>
+              Armaan International
+            </span>
+          </Link>
+        </div>
 
-          <div className="hidden md:flex items-center justify-end flex-1">
-            <nav className="flex items-center space-x-6 lg:space-x-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "font-medium text-sm lg:text-base transition-colors",
-                    isScrolled 
-                      ? "text-foreground hover:text-sky-500" 
-                      : "text-white hover:text-sky-300",
-                    pathname === link.href 
-                      ? (isScrolled ? "text-sky-500 font-bold" : "text-sky-300 font-bold") 
-                      : ""
-                  )}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
+        <div className="hidden md:flex items-center justify-end">
+          <nav className="flex items-center space-x-6 lg:space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "font-medium text-sm lg:text-base transition-colors",
+                  isScrolled 
+                    ? "text-foreground hover:text-sky-500" 
+                    : "text-white hover:text-sky-300",
+                  pathname === link.href 
+                    ? (isScrolled ? "text-sky-500 font-bold" : "text-sky-300 font-bold") 
+                    : ""
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
-          <div className="md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className={cn(isScrolled ? "text-primary" : "text-white hover:bg-white/20 hover:text-white")}>
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Open menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-card">
-                 <div className="flex-shrink-0 mb-8">
-                    <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                      <School className="h-8 w-8 text-primary" />
-                      <span className="text-xl font-headline font-bold text-primary">
-                        Armaan International
-                      </span>
-                    </Link>
-                  </div>
-                <nav className="flex flex-col space-y-4">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={cn(
-                        "text-lg font-medium text-foreground hover:text-sky-500 transition-colors py-2 rounded-md",
-                        pathname === link.href ? "text-sky-500 font-bold bg-muted" : ""
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </div>
+        <div className="md:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className={cn(isScrolled ? "text-primary" : "text-white hover:bg-white/20 hover:text-white")}>
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Open menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-card">
+               <div className="flex-shrink-0 mb-8">
+                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                    <School className="h-8 w-8 text-primary" />
+                    <span className="text-xl font-headline font-bold text-primary">
+                      Armaan International
+                    </span>
+                  </Link>
+                </div>
+              <nav className="flex flex-col space-y-4">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "text-lg font-medium text-foreground hover:text-sky-500 transition-colors py-2 rounded-md",
+                      pathname === link.href ? "text-sky-500 font-bold bg-muted" : ""
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
