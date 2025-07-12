@@ -45,20 +45,18 @@ export function AppHeader() {
       isScrolled ? "bg-card shadow-md" : "bg-transparent"
     )}>
       <div className="flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex-shrink-0">
-          <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-            <School className={cn("h-8 w-8", textColorClass, textShadowClass)} />
-            <span className={cn(
-              "text-xl font-headline font-bold",
-              textColorClass,
-              textShadowClass
-            )}>
-              Armaan International
-            </span>
-          </Link>
-        </div>
+        <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+          <School className={cn("h-8 w-8", textColorClass, textShadowClass)} />
+          <span className={cn(
+            "text-xl font-headline font-bold",
+            textColorClass,
+            textShadowClass
+          )}>
+            Armaan International
+          </span>
+        </Link>
 
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:flex items-center gap-x-8">
           <nav className="flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <Link
