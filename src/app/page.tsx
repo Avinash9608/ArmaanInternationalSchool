@@ -16,7 +16,8 @@ const heroImages = [
     alt: "Students learning in a classroom",
     hint: "classroom students",
     title: "Empowering Young Minds",
-    description: "Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence."
+    description: "Join us at Armaan International School to embark on a journey of knowledge, growth, and excellence.",
+    isGoogleDrive: true,
   },
   {
     src: "https://placehold.co/1920x1080.png",
@@ -51,15 +52,22 @@ function HeroSection() {
           {heroImages.map((image, index) => (
             <CarouselItem key={index} className="h-full">
               <div className="relative w-full h-full flex items-center justify-center text-center">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  data-ai-hint={image.hint}
-                  fill
-                  className="object-cover brightness-50"
-                  priority={index === 0}
-                  unoptimized
-                />
+                {image.isGoogleDrive ? (
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover brightness-50"
+                  />
+                ) : (
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    data-ai-hint={image.hint}
+                    fill
+                    className="object-cover brightness-50"
+                    priority={index === 0}
+                  />
+                )}
                 <div className="relative z-10 text-white container mx-auto px-4">
                   <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg animate-fade-in-down">
                     {image.title}
